@@ -2,9 +2,6 @@
 
 Full-stack reservation system built with FastAPI, PostgreSQL, and React, featuring automated backend bootstrap, database validation, and a modern frontend dashboard.
 
-📸 Preview
-
-(Adicione aqui um print do seu sistema depois — isso aumenta MUITO o impacto)
 
 ⚙️ Features
 Reservation management system (create, validate, and manage bookings)
