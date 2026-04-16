@@ -1,0 +1,41 @@
+2026-03-20 15:25:02,415 INFO Dependências já estão instaladas.
+2026-03-20 15:25:02,418 INFO Conexão com PostgreSQL validada com sucesso.
+2026-03-20 15:26:12,906 INFO Dependências já estão instaladas.
+2026-03-20 15:26:12,908 INFO Conexão com PostgreSQL validada com sucesso.
+2026-03-20 15:33:26,790 INFO Dependências já estão instaladas.
+2026-03-20 15:33:26,793 INFO Conexão com PostgreSQL validada com sucesso.
+2026-03-20 15:34:23,549 INFO DATABASE_URL configurada (mascarada): postgresql+asyncpg://postgres:***@localhost:5432/bdp_app
+2026-03-20 15:34:23,599 INFO Dependências já estão instaladas.
+2026-03-20 15:37:01,330 INFO DATABASE_URL configurada (mascarada): postgresql+asyncpg://postgres:***@localhost:5432/bdp_app
+2026-03-20 15:37:01,403 INFO Dependências já estão instaladas.
+2026-03-20 15:37:34,808 INFO DATABASE_URL configurada (mascarada): postgresql+asyncpg://postgres:***@localhost:5432/bdp_app
+2026-03-20 15:37:34,871 INFO Dependências já estão instaladas.
+2026-03-20 15:37:35,028 INFO Conexão com PostgreSQL validada com sucesso.
+2026-03-20 15:37:35,029 INFO Iniciando servidor: C:\Users\Jurídico\AppData\Local\Programs\Python\Python313\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+2026-03-20 16:01:04,259 INFO DATABASE_URL configurada (mascarada): postgresql+asyncpg://postgres:***@localhost:5432/bdp_app
+2026-03-20 16:01:04,319 INFO Dependências já estão instaladas.
+2026-03-20 16:01:04,466 INFO Conexão com PostgreSQL validada com sucesso.
+2026-03-20 16:01:04,467 INFO Iniciando servidor: C:\Users\Jurídico\AppData\Local\Programs\Python\Python313\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+2026-03-20 16:15:57,525 INFO Dependências já estão instaladas.
+2026-03-20 16:15:57,527 INFO Conexão com PostgreSQL validada com sucesso.
+2026-03-20 16:17:36,846 INFO DATABASE_URL configurada (mascarada): postgresql+asyncpg://postgres:***@localhost:5432/bdp_app
+2026-03-20 16:17:36,891 INFO Dependências já estão instaladas.
+2026-03-20 16:17:37,067 INFO Schema não encontrado (tabela usuarios ausente). Aplicando C:/Users/Jurídico/Documents/appbdp/database/01_init_schema.sql
+2026-03-20 19:04:40,338 INFO DATABASE_URL configurada (mascarada): postgresql+asyncpg://user:***@127.0.0.1:9999/bdp_app
+2026-03-20 19:04:40,469 INFO Dependências já estão instaladas.
+2026-03-20 19:05:23,077 INFO DATABASE_URL configurada (mascarada): postgresql+asyncpg://user:***@127.0.0.1:9999/bdp_app
+2026-03-20 19:05:23,210 INFO Dependências já estão instaladas.
+2026-03-20 19:08:13,219 INFO DATABASE_URL configurada (mascarada): postgresql+asyncpg://user:***@127.0.0.1:9999/bdp_app
+2026-03-20 19:08:13,295 INFO Dependências já estão instaladas.
+2026-03-20 21:24:13,158 INFO DATABASE_URL configurada (mascarada): postgresql+asyncpg://postgres:***@localhost:5432/bdp_app
+2026-03-20 21:24:13,248 INFO Dependências já estão instaladas.
+2026-03-20 21:24:13,773 INFO Conexão com PostgreSQL validada com sucesso.
+2026-03-20 21:24:13,775 INFO Iniciando servidor: C:\Users\gabri\OneDrive\Documentos\appbdp\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+2026-03-20 23:03:31,765 INFO DATABASE_URL configurada (mascarada): postgresql+asyncpg://postgres:***@localhost:5432/bdp_app
+2026-03-20 23:03:31,844 INFO Dependências já estão instaladas.
+2026-03-20 23:03:32,278 INFO Conexão com PostgreSQL validada com sucesso.
+2026-03-20 23:03:32,279 INFO Iniciando servidor: C:\Users\gabri\OneDrive\Documentos\appbdp\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+2026-03-22 11:32:40,594 INFO DATABASE_URL configurada (mascarada): postgresql+asyncpg://postgres:***@localhost:5432/bdp_app
+2026-03-22 11:32:40,690 INFO Dependências já estão instaladas.
+2026-03-22 11:32:41,825 INFO Conexão com PostgreSQL validada com sucesso.
+2026-03-22 11:32:41,826 INFO Iniciando servidor: C:\Users\gabri\OneDrive\Documentos\appbdp\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
