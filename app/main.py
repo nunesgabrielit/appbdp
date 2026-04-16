@@ -6,11 +6,14 @@ import os
 import uuid
 from contextlib import asynccontextmanager
 from datetime import date, datetime
+from pathlib import Path as FilePath
 from zoneinfo import ZoneInfo
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from fastapi import Depends, FastAPI, Header, HTTPException, Path, Query, status
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -30,6 +33,7 @@ from .schemas import (
 
 TZ_AMERICA_RIO_BRANCO = ZoneInfo("America/Rio_Branco")
 DEFAULT_ADMIN_ACCESS_KEY = "gabriel15"
+WEB_DIST_DIR = FilePath(__file__).resolve().parent.parent / "web" / "dist"
 
 
 @asynccontextmanager
@@ -61,6 +65,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+if WEB_DIST_DIR.exists():
+    app.mount("/assets", StaticFiles(directory=WEB_DIST_DIR / "assets"), name="web-assets")
 
 
 def require_admin_access(x_admin_key: str | None = Header(default=None, alias="X-Admin-Key")) -> None:
@@ -194,3 +201,22 @@ async def confirmar_reserva(
         if not reserva:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Reserva nao encontrada")
     return ReservaStatusOut(id=reserva.id, status=reserva.status)
+
+
+@app.get("/", include_in_schema=False)
+async def frontend_index() -> FileResponse:
+    if not WEB_DIST_DIR.exists():
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Frontend nao publicado")
+    return FileResponse(WEB_DIST_DIR / "index.html")
+
+
+@app.get("/{full_path:path}", include_in_schema=False)
+async def frontend_routes(full_path: str) -> FileResponse:
+    if not WEB_DIST_DIR.exists():
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Not Found")
+
+    requested_path = WEB_DIST_DIR / full_path
+    if requested_path.is_file():
+        return FileResponse(requested_path)
+
+    return FileResponse(WEB_DIST_DIR / "index.html")
